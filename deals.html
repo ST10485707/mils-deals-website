@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals - MILS DEALS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>MILS DEALS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deals.html" class="active">Deals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+        <!-- 
+            MAIN DEALS SECTION:
+            Displays Eastern Cape adventure deals in a responsive grid layout.
+            Each deal card includes an image, title, location, price, and booking button.
+            Reference: DeepSeek (2023) Product card design best practices
+        -->
+        <h2>Eastern Cape Exclusive Deals</h2>
+        
+        <div class="deals-grid">
+            <!-- 
+                DEAL CARD 1: Algoa Bay Sunset Cruise
+                - Uses lazy loading for better page performance
+                - Includes urgency messaging ("2 Spots Open Now!")
+                - Shows discounted price with original price strikethrough
+            -->
+            <section class="deal-card">
+                <img 
+                    src="images/sunset-cruise.jpg" 
+                    alt="Sunset cruise boat in Algoa Bay with mountains"
+                    loading="lazy"
+                    width="400"
+                    height="auto"
+                    style="max-width:100%;"
+                >
+                <h3>Limited offer: Algoa Bay Sunset Cruise!</h3> 
+                <br>
+                <h6> 2 Spots Open Now!</h6>  <!-- Urgency indicator -->
+                <p class="location">Port Elizabeth Harbour</p>
+                <p class="price"> Now R899 <span class="original-price"> Was R1500</span></p>  <!-- Price comparison -->
+                <a href="algoa-cruise.html" class="button">Book Now</a>  <!-- Primary call-to-action -->
+            </section>
+
+            <!-- 
+                DEAL CARD 2: Baviaanskloof Horse Trail
+                - Consistent card structure with image, details, and CTA
+                - Uses same responsive image pattern
+            -->
+            <section class="deal-card">
+                <img 
+                    src="images/horse-trail.jpg" 
+                    alt="Horse riding through Baviaanskloof mountains"
+                    loading="lazy"
+                    width="400"
+                    height="auto"
+                    style="max-width:100%;"
+                >
+                <h3>Baviaanskloof Horse Trail</h3>
+                <p class="location">Baviaanskloof Nature Reserve</p>
+                <p class="price"> Now R450 <span class="original-price"> Was R700</span></p>
+                <a href="horse-trail.html" class="button">Book Now</a>
+            </section>
+
+            <!-- 
+                DEAL CARD 3: Tsitsikamma Quad Adventure
+                - Adventure experience card
+                - Note the significant discount (R1200 → R699)
+            -->
+            <section class="deal-card">
+                <img 
+                    src="images/tsitsikamma-quad.jpg" 
+                    alt="Quad biking through Tsitsikamma Forest"
+                    loading="lazy"
+                    width="400"
+                    height="auto"
+                    style="max-width:100%;"
+                >
+                <h3>Tsitsikamma Quad Adventure</h3>
+                <p class="location">Storms River</p>
+                <p class="price"> Now R699 <span class="original-price"> Was R1200</span></p>
+                <a href="tsitsikamma-adventure.html" class="button">Book Now</a>
+            </section>
+
+            <!-- 
+                DEAL CARD 4: Addo Elephant Safari
+                - Wildlife experience card
+                - Features prominent price savings
+            -->
+            <section class="deal-card">
+                <img 
+                    src="images/addo-elephant.jpg" 
+                    alt="Elephant in Addo Elephant Park"
+                    loading="lazy"
+                    width="400"
+                    height="auto"
+                    style="max-width:100%;"
+                >
+                <h3>Addo Elephant Safari</h3>
+                <p class="location">Addo National Park</p>
+                <p class="price"> Now R600 <span class="original-price"> Was R1000</span></p>
+                <a href="addo-safari.html" class="button">Book Now</a>
+            </section>
+        </div>
+    </main>
+
+    <!-- 
+        FOOTER:
+        Standard copyright notice with regional pride messaging
+        Reference: DeepSeek (2023) Website footer conventions
+    -->
+    <footer>
+        <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
+    </footer>
+</body>
+</html>

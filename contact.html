@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Reference: W3Schools (2023) HTML meta tag. Available at: https://www.w3schools.com/tags/tag_meta.asp
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MILS DEALS</title>
+    <!-- 
+        Link to external CSS stylesheet
+        Reference: MDN Web Docs (2023) HTML link element. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
+    -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- 
+        Main header section with navigation
+        Reference: DeepSeek (2023) Website navigation best practices
+    -->
+    <header>
+        <h1>MILS DEALS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 
+            Contact section containing office info and contact form
+            Reference: Google Developers (2023) Accessible forms. Available at: https://developers.google.com/web/fundamentals/design-and-ux/input/forms
+        -->
+        <section class="contact-section">
+            <h2>Get in Touch</h2>
+            <div class="contact-container">
+                <!-- Office Information Section -->
+                <div class="office-info">
+                    <h3>Our Office</h3>
+                    <!-- 
+                        Address information with semantic markup
+                        Reference: Freep!k (2023) Available at: https://img.freepik.com/premium-photo/office-image-created-by-ai_828631-8061.jpg
+                    -->
+                    <address>
+                        <!-- 
+                            Office image with lazy loading
+                            Reference: Web.dev (2023) Lazy loading images. Available at: https://web.dev/lazy-loading-images/
+                        -->
+                        <img src="images/ec-office.jpg" 
+                             alt="MILS DEALS office building in Gqeberha" 
+                             loading="lazy"
+                             width="400"
+                             height="auto">
+                        <p>
+                            27 Dealers Avenue<br>
+                            Gqeberha, 6001<br>
+                            Eastern Cape
+                        </p>
+                        <!-- Contact methods with appropriate microdata -->
+                        <p>📞 <a href="tel:+27411234567">041 123 4567</a></p>
+                        <p>✉️ <a href="mailto:info@milsdeals.co.za">info@milsdeals.co.za</a></p>
+                    </address>
+                </div>
+
+                <!-- Contact Form Section -->
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <!-- 
+                        Contact form with required fields
+                    -->
+                    <form id="contactForm" method="POST" action="/submit-form">
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" 
+                                   id="name" 
+                                   name="name" 
+                                   required
+                                   minlength="2"
+                                   aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   required
+                                   aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" 
+                                      name="message" 
+                                      rows="5" 
+                                      required
+                                      aria-required="true"></textarea>
+                        </div>
+
+                        <!-- 
+                            Submit button with type attribute
+                            Reference: W3C (2023) HTML button element. Available at: https://www.w3.org/TR/html52/sec-forms.html#the-button-element
+                        -->
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 
+        Footer section with copyright information
+    -->
+    <footer>
+        <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
+    </footer>
+
+    <!-- 
+        References:
+        1. W3Schools (2023) HTML Tutorial. Available at: https://www.w3schools.com/html/
+        2. MDN Web Docs (2023) HTML elements reference. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+        3. DeepSeek AI (2023) Web development best practices. [Online]
+        4. Google Developers (2023) Web Fundamentals. Available at: https://developers.google.com/web/fundamentals
+        5. W3C (2023) Web Accessibility Initiative. Available at: https://www.w3.org/WAI/
+    -->
+</body>
+</html>

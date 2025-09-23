@@ -1,180 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Reference: W3Schools (2023) HTML meta tag. Available at: https://www.w3schools.com/tags/tag_meta.asp -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About MILS DEALS</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>About Us - MILS DEALS</title>
+    <link rel="stylesheet" href="css/styling.css">
 </head>
 <body>
-    <!-- Main header section containing logo and navigation -->
     <header>
-        <!-- Logo container with responsive image -->
-        <div class="logo-container">
-            <img src="images/mils-deals-logo.jpg"
-                alt="MILS DEALS logo"
-                class="logo-image"
-                loading="lazy"
-                width="100" 
-                height="auto" 
-                style="max-width:100%;">
-        </div>
+        <a href="index.html" class="logo-container">
+            <img src="images/mils-deals-logo.jpg" 
+                 alt="MILS DEALS Logo - Eastern Cape's best adventure deals"
+                 class="logo-image">
+        </a>
         
-        <!-- Main page heading -->
-        <h1>About MILS DEALS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <!-- About introduction section -->
-        <section class="about-intro">
-            <h2>Eastern Cape's Premier Experience Marketplace!</h2>
-            <p>Welcome to MILS DEALS!! – Your Gateway to Eastern Cape Adventures!</p>
-            <p>Eastern Cape's #1 Experience Marketplace</p>
-            <p>From breathtaking nature escapes to thrilling adventures, we connect you with the best deals on unforgettable experiences across our beautiful province.</p>
-        </section>
-
-        <!-- Video section -->
-        <section class="video-section">
-            <h2>Experience the Eastern Cape</h2>
-            <div class="video-container">
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/HvtuwCFKQ9o?si=Y5T_Q2Ej9LzClC1E" 
-                    title="Gqebera Overview" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p>See why thousands choose MILS DEALS for Eastern Cape adventures!</p>
-        </section>
-
-        <!-- Detailed description section -->
-        <section class="about-description">
-            <p>At MILS DEALS, we believe in making extraordinary experiences accessible to everyone. Whether you're a local or a visitor, our platform offers exclusive deals on the best activities, dining, and getaways in the Eastern Cape.</p>
-            
-            <p>Discover exclusive deals you won't find anywhere else! We're your trusted shortcut to the best dining, adrenaline-pumping adventures, luxury getaways, and hidden gems across our stunning province.</p>
-            
-            <p>Our mission is simple: to help you explore the Eastern Cape like never before, all while saving you money. We partner with local businesses to bring you the best experiences at unbeatable prices.</p>
-            
-            <!-- Why choose us section with bullet points -->
-            <div class="why-choose-us">
-                <h3>Why Choose Us?</h3>
-                <ul>
-                    <li>Local Expertise: Our team knows the Eastern Cape inside out, curating only the best experiences for you.</li>
-                    <li>Handpicked Experiences: Every deal is personally verified by our team of local experts.</li>
-                    <li>Save Up to 60%: Luxury for less—because unforgettable memories shouldn't break the bank.</li>
-                    <li>Exclusive Offers: Enjoy deals you won't find on any other platform.</li>
-                    <li>Proudly Local: Supporting Eastern Cape businesses since 2022.</li>
-                </ul>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <h1>About MILS DEALS</h1>
+                <p class="hero-subtitle">Eastern Cape's Premier Adventure Marketplace</p>
             </div>
         </section>
 
-        <!-- Eastern Cape focus section with map -->
-        <section class="eastern-cape-focus">
-            <h3>Explore the Eastern Cape</h3>
-            <p>From the rugged beauty of the Wild Coast to the serene landscapes of the Karoo, our deals cover every corner of the Eastern Cape. Whether you're looking for adventure, relaxation, or cultural experiences, we have something for everyone.</p>
-            
-            <p class="limited-time-offers">Limited-Time Offers!</p>
-            
-            <!-- Eastern Cape map image with lazy loading -->
-            <img src="images/ec-map.jpg"
-                alt="Map of Eastern Cape highlighting key locations"
-                loading="lazy"
-                class="ec-map"
-                width="400" 
-                style="max-width: 100%; height: auto;">
+        <!-- Our Story Section -->
+        <section class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Story</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="story-content">
+                    <p>Founded in 2022, MILS DEALS emerged from a passion for showcasing the Eastern Cape's incredible adventure opportunities while making them accessible to everyone. Our founders, lifelong residents of the province, recognized the need for a platform that connects adventure seekers with authentic local experiences.</p>
+                    
+                    <p>What began as a small initiative to promote local tourism has grown into Eastern Cape's most trusted adventure marketplace. We've helped over 15,000 customers discover hidden gems and create unforgettable memories, while supporting more than 500 local businesses across the province.</p>
+                    
+                    <p>Our mission remains unchanged: to bridge the gap between adventure enthusiasts and the rich, diverse experiences the Eastern Cape has to offer, all while ensuring exceptional value and uncompromising quality.</p>
+                </div>
+            </div>
+        </section>
 
-            <!-- Interactive map section for Tsitsikamma National Park -->
-            <section class="location-map">
-                <h3>Tsitsikamma National Park</h3>
-                <a href="https://www.google.com/maps/place/Tsitsikamma+National+Park/@-34.021634,23.901841,15z" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <div class="map-placeholder">
-                        <p>📍 Click to explore Tsitsikamma on Google Maps</p>
-                        <!-- Thumbnail image with responsive sizing -->
-                        <img src="images/tumbnail.jpg" 
-                            alt="Tsitsikamma National Park preview" 
-                            style="max-width: 100%; height: auto;"
-                            width="400"
-                            loading="lazy">
+        <!-- Why Choose Us Section -->
+        <section class="content-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose MILS DEALS</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <h3>Curated Experiences</h3>
+                        <p>Every adventure is personally verified by our team of local experts to ensure quality and authenticity.</p>
                     </div>
-                </a>
-            </section>
-        </section>
-
-        <!-- Company mission and stats section -->
-        <section class="our-mission">
-            <h3>Our Story</h3>
-            <p>Born in the heart of the Eastern Cape, our team of passionate deal hunters scours the province to bring you exclusive discounts. Since 2022, we've helped locals and visitors experience more while spending less.</p>
-            
-            <!-- Impact statistics displayed in a flex/grid layout -->
-            <div class="impact-stats">
-                <div class="stat">
-                    <span class="number">15,000+</span>
-                    <span class="label">Happy Customers</span>
-                </div>
-                <div class="stat">
-                    <span class="number">500+</span>
-                    <span class="label">Local Businesses Supported</span>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <h3>Significant Savings</h3>
+                        <p>Access premium experiences at up to 60% off regular prices through our exclusive partnerships.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <h3>Local Expertise</h3>
+                        <p>Benefit from our deep knowledge of Eastern Cape's hidden gems and unique adventure opportunities.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <h3>Community Support</h3>
+                        <p>Your participation directly supports local Eastern Cape businesses and sustainable tourism development.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials section -->
-        <section class="testimonials">
-            <h3>Why Our Community Loves Us</h3>
-            <blockquote>
-                "MILS DEALS helped me afford my dream anniversary getaway to Tsitsikamma - something we'd never experience without their discounts!"
-                <cite>- Nomsa P., Port Elizabeth</cite>
-            </blockquote>
+        <!-- Impact Statistics -->
+        <section class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Impact</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">15,000+</span>
+                        <span class="stat-label">Satisfied Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Local Partners</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">R2.5M+</span>
+                        <span class="stat-label">Customer Savings</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">94%</span>
+                        <span class="stat-label">Satisfaction Rate</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Local business support section -->
-        <section class="local-support">
-            <h3>Proudly Eastern Cape</h3>
-            <p>We're committed to boosting local tourism and helping Eastern Cape businesses thrive. Every deal you purchase supports our province's economy.</p>
-            <ul class="local-highlights">
-                <li>✓ Exclusive partnerships with Eastern Cape vendors</li>
-                <li>✓ Special deals for residents</li>
-                <li>✓ Curated experiences showcasing our region's beauty</li>
-            </ul>
+        <!-- Testimonial -->
+        <section class="content-section bg-light">
+            <div class="container">
+                <div class="testimonial">
+                    <blockquote>
+                        "MILS DEALS made our anniversary celebration unforgettable. The Tsitsikamma quad biking experience was professionally organized and exceeded all expectations. The savings allowed us to extend our stay and explore more of what the Eastern Cape has to offer."
+                    </blockquote>
+                    <cite>- Nomsa P., Port Elizabeth</cite>
+                </div>
+            </div>
         </section>
 
-        <!-- Call to action section -->
-        <section class="call-to-action">
-            <h3>Join the MILS DEALS Family!</h3>
-            <p>Sign up for our newsletter to get the latest deals delivered straight to your inbox.</p>
-            <a href="signup.html" class="cta-button">Subscribe Now</a>
-        </section>
-
-        <!-- Contact information section -->
-        <section class="contact-info">
-            <h3>Get in Touch</h3>
-            <p>Have questions or need help? Contact us at:</p>
-            <ul>
-                <li>Email: <a href="mailto:info@milsdeals.com">info@milsdeals.com</a></li>
-            </ul>
-        </section>
-
-        <!-- Social media links section -->
-        <section class="social-media">
-            <h3>Follow Us</h3>
-            <p>Stay connected for the latest deals and updates:</p>
-            <ul>
-                <li><a href="https://www.facebook.com/milsdeals" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                <li><a href="https://www.instagram.com/milsdeals" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            </ul>
+        <!-- Eastern Cape Focus -->
+        <section class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Eastern Cape Commitment</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="commitment-content">
+                    <p>We are deeply committed to promoting sustainable tourism in the Eastern Cape. Our partnerships focus on:</p>
+                    <ul class="commitment-list">
+                        <li>Supporting locally-owned businesses and operators</li>
+                        <li>Promoting eco-friendly and sustainable adventure practices</li>
+                        <li>Showcasing the diverse cultural heritage of our region</li>
+                        <li>Creating economic opportunities for local communities</li>
+                        <li>Preserving the natural beauty of Eastern Cape for future generations</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
+        <div class="footer-content">
+            <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About</a>
+                <a href="signin.html">Sign In</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

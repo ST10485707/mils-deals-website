@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - MILS DEALS</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styling.css">
 </head>
 <body>
     <header>
-        <h1>MILS DEALS</h1>
+        <a href="index.html" class="logo-container">
+            <img src="images/mils-deals-logo.jpg" 
+                 alt="MILS DEALS Logo - Eastern Cape's best adventure deals"
+                 class="logo-image">
+        </a>
+        
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -28,18 +33,22 @@
         </div>
 
         <!-- Sign In Form -->
-        <div id="signin" class="auth-form" style="display: block;">
+        <div id="signin" class="auth-form">
             <h2>Welcome Back!</h2>
             <form>
-                <label for="login-email">Email:</label>
-                <input type="email" id="login-email" required>
-
-                <label for="login-password">Password:</label>
-                <input type="password" id="login-password" required>
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" required>
+                </div>
 
                 <a href="#" class="forgot-password">Forgot password?</a>
 
-                <button type="submit">Sign In</button>
+                <button type="submit" class="cta-button">Sign In</button>
             </form>
         </div>
 
@@ -47,22 +56,32 @@
         <div id="register" class="auth-form" style="display: none;">
             <h2>Create Your Account</h2>
             <form>
-                <label for="reg-name">Full Name:</label>
-                <input type="text" id="reg-name" required>
+                <div class="form-group">
+                    <label for="reg-name">Full Name:</label>
+                    <input type="text" id="reg-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="reg-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-phone">Phone:</label>
+                    <input type="tel" id="reg-phone" placeholder="+27 82 075 1392">
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-password">Password:</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-confirm">Confirm Password:</label>
+                    <input type="password" id="reg-confirm" required>
+                </div>
 
-                <label for="reg-email">Email:</label>
-                <input type="email" id="reg-email" required>
-
-                <label for="reg-phone">Phone:</label>
-                <input type="tel" id="reg-phone" placeholder="+27 82 075 1392">
-
-                <label for="reg-password">Password:</label>
-                <input type="password" id="reg-password" required>
-
-                <label for="reg-confirm">Confirm Password:</label>
-                <input type="password" id="reg-confirm" required>
-
-                <button type="submit">Register</button>
+                <button type="submit" class="cta-button">Register</button>
             </form>
         </div>
 

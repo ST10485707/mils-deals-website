@@ -3,77 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MILS DEALS</title> 
-    <link rel="stylesheet" href="css/styles.css"> <!-- Link to CSS -->
+    <title>MILS DEALS - Eastern Cape Adventure Deals</title>
+    <link rel="stylesheet" href="css/styling.css">
 </head>
 <body>
     <header>
-        <h1>MILS DEALS</h1> <!-- brand name -->
+        <a href="index.html" class="logo-container">
+            <img src="images/mils-deals-logo.jpg" 
+                 alt="MILS DEALS Logo - Eastern Cape's best adventure deals"
+                 class="logo-image">
+        </a>
+        
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="deals.html">Deals</a></li> <!-- All deals in one page -->
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="deals.html">Deals</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="signin.html">Sign In / Register</a></li>
-                
+                <li><a href="signin.html">Sign In</a></li>
             </ul>
         </nav>
-        <a href="signin.html" class="signin">Sign In/ Create Account</a>
     </header>
 
     <main>
-    <!-- Hero Section with Eastern Cape Attraction -->
-    <section class="hero-deal">
-        <img 
-            src="images/tsitsikamma-quadbike.jpg" 
-            alt="Quad biking through Tsitsikamma Forest"
-            class="hero-image"
-        >
-        <div class="deal-content">
-            <h2>Tsitsikamma Forest Quad Adventure</h2>
-            <p class="location">Storms River, Eastern Cape</p>
-            <p class="price">Now R699 <span class="original-price">Was R1200</span></p>
-            <p class="sale-ends">Only 3 spots left!</p>
-            <a href="tsitsikamma-adventure.html" class="cta-button">BOOK NOW</a>
-        </div>
-    </section>
+        <!-- Hero Section -->
+        <section class="hero-deal">
+            <div class="hero-content">
+                <h1>Discover Eastern Cape Adventures</h1>
+                <p class="hero-subtitle">Unbeatable deals on unforgettable experiences</p>
+                <p class="price">From R450 <span class="original-price">Save up to 60%</span></p>
+                <a href="deals.html" class="cta-button">Explore All Deals</a>
+            </div>
+            <img src="images/tsitsikamma-quadbike.jpg" 
+                 alt="Quad biking through Tsitsikamma Forest"
+                 class="hero-image">
+        </section>
 
-    <!-- Eastern Cape Featured Deals -->
-    <section class="featured-deals">
-        <h2>Like Paradise, More Eastern Cape Adventures!</h2>
-        
-        <div class="deal-grid">
-            <!-- Deal 1 -->
-            <article class="deal-card">
-                <img 
-                    src="images/algoa-cruise.jpg" 
-                    alt="Sunset cruise in Algoa Bay"
-                    loading="lazy"
-                    width="300" 
-                    height="auto" 
-                    style="max-width:100%;">
+        <!-- Featured Deals Section -->
+        <section class="featured-deals">
+            <div class="container">
+                <h2>Featured Eastern Cape Adventures</h2>
+                <p class="section-subtitle">Handpicked experiences just for you</p>
                 
-                <h3>Algoa Bay Sunset Cruise</h3>
-                <p class="price"> Now R499 <span class="original-price"> Was R850</span></p>
-                <a href="algoa-cruise.html" class="button">View Deal</a>
-            </article>
+                <div class="deal-grid">
+                    <!-- Deal 1 -->
+                    <article class="deal-card">
+                        <div class="deal-badge">🌅 Sunset Special</div>
+                        <img src="images/algoa-cruise.jpg" 
+                             alt="Sunset cruise in Algoa Bay"
+                             loading="lazy">
+                        <div class="deal-content">
+                            <h3>Algoa Bay Sunset Cruise</h3>
+                            <p class="location">📍 Port Elizabeth Harbour</p>
+                            <div class="price-section">
+                                <span class="price">R499</span>
+                                <span class="original-price">R850</span>
+                                <span class="discount">-41%</span>
+                            </div>
+                            <a href="algoa-cruise.html" class="cta-button">View Deal</a>
+                        </div>
+                    </article>
 
-            <!-- Deal 2 -->
-            <article class="deal-card">
-                <img 
-                    src="images/horse-trail.jpg" 
-                    alt="Horse riding in Baviaanskloof"
-                    loading="lazy"
-                >
-                <h3>Baviaanskloof Horse Trail</h3>
-                <p class="price"> Now R450 <span class="original-price"> Was R700</span></p>
-                <a href="horse-trail.html" class="button">View Deal</a>
-            </article>
+                    <!-- Deal 2 -->
+                    <article class="deal-card">
+                        <div class="deal-badge"> Nature Escape</div>
+                        <img src="images/horse-trail.jpg" 
+                             alt="Horse riding in Baviaanskloof"
+                             loading="lazy">
+                        <div class="deal-content">
+                            <h3>Baviaanskloof Horse Trail</h3>
+                            <p class="location"> Baviaanskloof Nature Reserve</p>
+                            <div class="price-section">
+                                <span class="price">R450</span>
+                                <span class="original-price">R700</span>
+                                <span class="discount">-36%</span>
+                            </div>
+                            <a href="horse-trail.html" class="cta-button">View Deal</a>
+                        </div>
+                    </article>
+
+                    <!-- Deal 3 - Additional featured deal -->
+                    <article class="deal-card">
+                        <div class="deal-badge"> Most Popular</div>
+                        <img src="images/tsitsikamma-quad.jpg" 
+                             alt="Quad biking in Tsitsikamma"
+                             loading="lazy">
+                        <div class="deal-content">
+                            <h3>Tsitsikamma Quad Adventure</h3>
+                            <p class="location"> Storms River</p>
+                            <div class="price-section">
+                                <span class="price">R699</span>
+                                <span class="original-price">R1200</span>
+                                <span class="discount">-42%</span>
+                            </div>
+                            <a href="tsitsikamma-adventure.html" class="cta-button">View Deal</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="view-all-container">
+                    <a href="deals.html" class="secondary-button">View All 12+ Deals →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2>Why Choose MILS DEALS?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <h3> Best Prices Guaranteed</h3>
+                        <p>Save up to 60% on premium experiences</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Verified Experiences</h3>
+                        <p>Every deal personally tested by our team</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Local Experts</h3>
+                        <p>Deep knowledge of Eastern Cape hidden gems</p>
+                    </div>
+                    <div class="feature">
+                        <h3> Instant Booking</h3>
+                        <p>Secure your spot in just a few clicks</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About</a>
+                <a href="signin.html">Sign In</a>
+            </div>
         </div>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
-</footer>
+    </footer>
+</body>
+</html>

@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deals - MILS DEALS</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styling.css">
 </head>
 <body>
     <header>
-        <h1>MILS DEALS</h1>
+        <a href="index.html" class="logo-container">
+            <img src="images/mils-deals-logo.jpg" 
+                 alt="MILS DEALS Logo - Eastern Cape's best adventure deals"
+                 class="logo-image">
+        </a>
+        
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -20,108 +25,260 @@
         </nav>
     </header>
 
-<main>
-        <!-- 
-            MAIN DEALS SECTION:
-            Displays Eastern Cape adventure deals in a responsive grid layout.
-            Each deal card includes an image, title, location, price, and booking button.
-            Reference: DeepSeek (2023) Product card design best practices
-        -->
-        <h2>Eastern Cape Exclusive Deals</h2>
-        
-        <div class="deals-grid">
-            <!-- 
-                DEAL CARD 1: Algoa Bay Sunset Cruise
-                - Uses lazy loading for better page performance
-                - Includes urgency messaging ("2 Spots Open Now!")
-                - Shows discounted price with original price strikethrough
-            -->
-            <section class="deal-card">
-                <img 
-                    src="images/sunset-cruise.jpg" 
-                    alt="Sunset cruise boat in Algoa Bay with mountains"
-                    loading="lazy"
-                    width="400"
-                    height="auto"
-                    style="max-width:100%;"
-                >
-                <h3>Limited offer: Algoa Bay Sunset Cruise!</h3> 
-                <br>
-                <h6> 2 Spots Open Now!</h6>  <!-- Urgency indicator -->
-                <p class="location">Port Elizabeth Harbour</p>
-                <p class="price"> Now R899 <span class="original-price"> Was R1500</span></p>  <!-- Price comparison -->
-                <a href="algoa-cruise.html" class="button">Book Now</a>  <!-- Primary call-to-action -->
-            </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="deals-hero">
+            <h1>Eastern Cape Adventure Deals</h1>
+            <p>Unbeatable prices on unforgettable experiences</p>
+        </section>
 
-            <!-- 
-                DEAL CARD 2: Baviaanskloof Horse Trail
-                - Consistent card structure with image, details, and CTA
-                - Uses same responsive image pattern
-            -->
-            <section class="deal-card">
-                <img 
-                    src="images/horse-trail.jpg" 
-                    alt="Horse riding through Baviaanskloof mountains"
-                    loading="lazy"
-                    width="400"
-                    height="auto"
-                    style="max-width:100%;"
-                >
-                <h3>Baviaanskloof Horse Trail</h3>
-                <p class="location">Baviaanskloof Nature Reserve</p>
-                <p class="price"> Now R450 <span class="original-price"> Was R700</span></p>
-                <a href="horse-trail.html" class="button">Book Now</a>
-            </section>
+        <!-- Search and Filter Section -->
+        <section class="search-section">
+            <div class="container">
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="dealSearch" placeholder="🔍 Search deals... (e.g., 'safari', 'cruise', 'adventure')">
+                    <button type="button" onclick="searchDeals()">Search</button>
+                </div>
+                
+                <!-- Filter Options -->
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label>Filter by Category:</label>
+                        <select id="categoryFilter" onchange="filterDeals()">
+                            <option value="all">All Categories</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="wildlife">Wildlife</option>
+                            <option value="water">Water Activities</option>
+                            <option value="nature">Nature</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Sort by:</label>
+                        <select id="sortFilter" onchange="sortDeals()">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+                    
+                    <button class="reset-filters" onclick="resetFilters()">Reset Filters</button>
+                </div>
+                
+                <!-- Search Results Info -->
+                <div class="search-results-info">
+                    <span id="resultsCount">Showing 4 deals</span>
+                </div>
+            </div>
+        </section>
 
-            <!-- 
-                DEAL CARD 3: Tsitsikamma Quad Adventure
-                - Adventure experience card
-                - Note the significant discount (R1200 → R699)
-            -->
-            <section class="deal-card">
-                <img 
-                    src="images/tsitsikamma-quad.jpg" 
-                    alt="Quad biking through Tsitsikamma Forest"
-                    loading="lazy"
-                    width="400"
-                    height="auto"
-                    style="max-width:100%;"
-                >
-                <h3>Tsitsikamma Quad Adventure</h3>
-                <p class="location">Storms River</p>
-                <p class="price"> Now R699 <span class="original-price"> Was R1200</span></p>
-                <a href="tsitsikamma-adventure.html" class="button">Book Now</a>
-            </section>
+        <!-- Deals Grid -->
+        <div class="deals-container">
+            <div class="deals-grid">
+                <!-- Deal 1: Algoa Bay Sunset Cruise -->
+                <article class="deal-card" data-category="water" data-price="899" data-popularity="85">
+                    <div class="deal-badge">🔥 2 Spots Left!</div>
+                    <img src="images/sunset-cruise.jpg" 
+                         alt="Sunset cruise boat in Algoa Bay with mountains"
+                         loading="lazy">
+                    <div class="deal-content">
+                        <h3>Algoa Bay Sunset Cruise</h3>
+                        <p class="location">📍 Port Elizabeth Harbour</p>
+                        <p class="deal-description">Experience breathtaking ocean views with a romantic sunset cruise along the beautiful Algoa Bay coastline.</p>
+                        <div class="price-section">
+                            <span class="price">R899</span>
+                            <span class="original-price">R1500</span>
+                            <span class="discount">-40%</span>
+                        </div>
+                        <a href="algoa-cruise.html" class="cta-button">Book Now</a>
+                    </div>
+                </article>
 
-            <!-- 
-                DEAL CARD 4: Addo Elephant Safari
-                - Wildlife experience card
-                - Features prominent price savings
-            -->
-            <section class="deal-card">
-                <img 
-                    src="images/addo-elephant.jpg" 
-                    alt="Elephant in Addo Elephant Park"
-                    loading="lazy"
-                    width="400"
-                    height="auto"
-                    style="max-width:100%;"
-                >
-                <h3>Addo Elephant Safari</h3>
-                <p class="location">Addo National Park</p>
-                <p class="price"> Now R600 <span class="original-price"> Was R1000</span></p>
-                <a href="addo-safari.html" class="button">Book Now</a>
-            </section>
+                <!-- Deal 2: Baviaanskloof Horse Trail -->
+                <article class="deal-card" data-category="nature" data-price="450" data-popularity="70">
+                    <img src="images/horse-trail.jpg" 
+                         alt="Horse riding through Baviaanskloof mountains"
+                         loading="lazy">
+                    <div class="deal-content">
+                        <h3>Baviaanskloof Horse Trail</h3>
+                        <p class="location">📍 Baviaanskloof Nature Reserve</p>
+                        <p class="deal-description">Explore stunning mountain trails on horseback with experienced guides through untouched wilderness.</p>
+                        <div class="price-section">
+                            <span class="price">R450</span>
+                            <span class="original-price">R700</span>
+                            <span class="discount">-36%</span>
+                        </div>
+                        <a href="horse-trail.html" class="cta-button">Book Now</a>
+                    </div>
+                </article>
+
+                <!-- Deal 3: Tsitsikamma Quad Adventure -->
+                <article class="deal-card" data-category="adventure" data-price="699" data-popularity="95">
+                    <div class="deal-badge">⚡ Most Popular</div>
+                    <img src="images/tsitsikamma-quad.jpg" 
+                         alt="Quad biking through Tsitsikamma Forest"
+                         loading="lazy">
+                    <div class="deal-content">
+                        <h3>Tsitsikamma Quad Adventure</h3>
+                        <p class="location">📍 Storms River</p>
+                        <p class="deal-description">Thrilling quad biking through ancient forests and coastal paths with professional guides.</p>
+                        <div class="price-section">
+                            <span class="price">R699</span>
+                            <span class="original-price">R1200</span>
+                            <span class="discount">-42%</span>
+                        </div>
+                        <a href="tsitsikamma-adventure.html" class="cta-button">Book Now</a>
+                    </div>
+                </article>
+
+                <!-- Deal 4: Addo Elephant Safari -->
+                <article class="deal-card" data-category="wildlife" data-price="600" data-popularity="90">
+                    <img src="images/addo-elephant.jpg" 
+                         alt="Elephant in Addo Elephant Park"
+                         loading="lazy">
+                    <div class="deal-content">
+                        <h3>Addo Elephant Safari</h3>
+                        <p class="location">📍 Addo National Park</p>
+                        <p class="deal-description">Get up close with Africa's gentle giants in their natural habitat with expert rangers.</p>
+                        <div class="price-section">
+                            <span class="price">R600</span>
+                            <span class="original-price">R1000</span>
+                            <span class="discount">-40%</span>
+                        </div>
+                        <a href="addo-safari.html" class="cta-button">Book Now</a>
+                    </div>
+                </article>
+
+                <!-- Additional Deals -->
+                <article class="deal-card" data-category="water" data-price="750" data-popularity="65">
+                    <div class="deal-badge">🌊 New</div>
+                    <img src="images/algoa-cruise.jpg" 
+                         alt="Dolphin watching tour"
+                         loading="lazy">
+                    <div class="deal-content">
+                        <h3>Dolphin Watching Tour</h3>
+                        <p class="location">📍 Algoa Bay</p>
+                        <p class="deal-description">Spot dolphins and marine life on this exciting 2-hour ocean safari tour.</p>
+                        <div class="price-section">
+                            <span class="price">R750</span>
+                            <span class="original-price">R1200</span>
+                            <span class="discount">-38%</span>
+                        </div>
+                        <a href="dolphin-tour.html" class="cta-button">Book Now</a>
+                    </div>
+                </article>
+
+                <article class="deal-card" data-category="nature" data-price="350" data-popularity="60">
+                    <img src="images/horse-trail.jpg" 
+                         alt="Hiking trail"
+                         loading="lazy">
+                    <div class="deal-content">
+                        <h3>Mountain Hiking Experience</h3>
+                        <p class="location">📍 Tsitsikamma Mountains</p>
+                        <p class="deal-description">Guided hiking trails through scenic mountain paths with panoramic views.</p>
+                        <div class="price-section">
+                            <span class="price">R350</span>
+                            <span class="original-price">R550</span>
+                            <span class="discount">-36%</span>
+                        </div>
+                        <a href="hiking.html" class="cta-button">Book Now</a>
+                    </div>
+                </article>
+            </div>
         </div>
     </main>
 
-    <!-- 
-        FOOTER:
-        Standard copyright notice with regional pride messaging
-        Reference: DeepSeek (2023) Website footer conventions
-    -->
     <footer>
         <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="about.html">About</a></p>
     </footer>
+
+    <script>
+        // Search and Filter Functionality
+        function searchDeals() {
+            const searchTerm = document.getElementById('dealSearch').value.toLowerCase();
+            const dealCards = document.querySelectorAll('.deal-card');
+            let visibleCount = 0;
+
+            dealCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('.deal-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('resultsCount').textContent = `Showing ${visibleCount} deals`;
+        }
+
+        function filterDeals() {
+            const category = document.getElementById('categoryFilter').value;
+            const dealCards = document.querySelectorAll('.deal-card');
+            let visibleCount = 0;
+
+            dealCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('resultsCount').textContent = `Showing ${visibleCount} deals`;
+        }
+
+        function sortDeals() {
+            const sortBy = document.getElementById('sortFilter').value;
+            const dealsContainer = document.querySelector('.deals-grid');
+            const dealCards = Array.from(document.querySelectorAll('.deal-card'));
+
+            dealCards.sort((a, b) => {
+                switch (sortBy) {
+                    case 'price-low':
+                        return parseInt(a.getAttribute('data-price')) - parseInt(b.getAttribute('data-price'));
+                    case 'price-high':
+                        return parseInt(b.getAttribute('data-price')) - parseInt(a.getAttribute('data-price'));
+                    case 'popular':
+                        return parseInt(b.getAttribute('data-popularity')) - parseInt(a.getAttribute('data-popularity'));
+                    default:
+                        return 0; // Featured - keep original order
+                }
+            });
+
+            // Clear and re-append sorted cards
+            dealsContainer.innerHTML = '';
+            dealCards.forEach(card => dealsContainer.appendChild(card));
+        }
+
+        function resetFilters() {
+            document.getElementById('dealSearch').value = '';
+            document.getElementById('categoryFilter').value = 'all';
+            document.getElementById('sortFilter').value = 'featured';
+            
+            const dealCards = document.querySelectorAll('.deal-card');
+            dealCards.forEach(card => card.style.display = 'block');
+            
+            document.getElementById('resultsCount').textContent = `Showing ${dealCards.length} deals`;
+            
+            // Reset to original order
+            sortDeals();
+        }
+
+        // Enable search on Enter key
+        document.getElementById('dealSearch').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchDeals();
+            }
+        });
+    </script>
 </body>
 </html>

@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - MILS DEALS</title>
+    <title>Sign In - MILS DEALS | Access Your Adventure Account</title>
+    <meta name="description" content="Sign in to your MILS DEALS account to manage your adventure bookings, save favorite deals, and access exclusive member benefits.">
+    <meta name="keywords" content="sign in MILS DEALS, account login, adventure booking account, member benefits">
     <link rel="stylesheet" href="css/styling.css">
 </head>
 <body>
@@ -35,53 +37,62 @@
         <!-- Sign In Form -->
         <div id="signin" class="auth-form">
             <h2>Welcome Back!</h2>
-            <form>
+            <form id="loginForm">
                 <div class="form-group">
                     <label for="login-email">Email:</label>
-                    <input type="email" id="login-email" required>
+                    <input type="email" id="login-email" name="login-email" required>
+                    <div class="error-message" id="login-emailError"></div>
                 </div>
                 
                 <div class="form-group">
                     <label for="login-password">Password:</label>
-                    <input type="password" id="login-password" required>
+                    <input type="password" id="login-password" name="login-password" required>
+                    <div class="error-message" id="login-passwordError"></div>
                 </div>
 
                 <a href="#" class="forgot-password">Forgot password?</a>
 
                 <button type="submit" class="cta-button">Sign In</button>
+                <div id="loginMessage"></div>
             </form>
         </div>
 
         <!-- Registration Form -->
         <div id="register" class="auth-form" style="display: none;">
             <h2>Create Your Account</h2>
-            <form>
+            <form id="registerForm">
                 <div class="form-group">
                     <label for="reg-name">Full Name:</label>
-                    <input type="text" id="reg-name" required>
+                    <input type="text" id="reg-name" name="reg-name" required>
+                    <div class="error-message" id="reg-nameError"></div>
                 </div>
                 
                 <div class="form-group">
                     <label for="reg-email">Email:</label>
-                    <input type="email" id="reg-email" required>
+                    <input type="email" id="reg-email" name="reg-email" required>
+                    <div class="error-message" id="reg-emailError"></div>
                 </div>
                 
                 <div class="form-group">
                     <label for="reg-phone">Phone:</label>
-                    <input type="tel" id="reg-phone" placeholder="+27 82 075 1392">
+                    <input type="tel" id="reg-phone" name="reg-phone" placeholder="+27 82 075 1392">
+                    <div class="error-message" id="reg-phoneError"></div>
                 </div>
                 
                 <div class="form-group">
                     <label for="reg-password">Password:</label>
-                    <input type="password" id="reg-password" required>
+                    <input type="password" id="reg-password" name="reg-password" required>
+                    <div class="error-message" id="reg-passwordError"></div>
                 </div>
                 
                 <div class="form-group">
                     <label for="reg-confirm">Confirm Password:</label>
-                    <input type="password" id="reg-confirm" required>
+                    <input type="password" id="reg-confirm" name="reg-confirm" required>
+                    <div class="error-message" id="reg-confirmError"></div>
                 </div>
 
                 <button type="submit" class="cta-button">Register</button>
+                <div id="registerMessage"></div>
             </form>
         </div>
 
@@ -89,22 +100,16 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
+        <div class="footer-content">
+            <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About</a>
+                <a href="signin.html">Sign In</a>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        // Simple tab switching
-        function openTab(tabName) {
-            document.querySelectorAll('.auth-form').forEach(form => {
-                form.style.display = 'none';
-            });
-            document.getElementById(tabName).style.display = 'block';
-            
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-        }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

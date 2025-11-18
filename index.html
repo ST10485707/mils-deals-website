@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MILS DEALS - Eastern Cape Adventure Deals</title>
+    <meta name="description" content="Discover unbeatable Eastern Cape adventure deals with MILS DEALS. Save up to 60% on quad biking, safaris, cruises and more in South Africa's adventure paradise.">
+    <meta name="keywords" content="Eastern Cape adventures, South Africa tourism, adventure deals, quad biking, safari, cruise deals">
     <link rel="stylesheet" href="css/styling.css">
 </head>
 <body>
@@ -45,10 +47,10 @@
                 <h2>Featured Eastern Cape Adventures</h2>
                 <p class="section-subtitle">Handpicked experiences just for you</p>
                 
-                <div class="deal-grid">
+                <div class="deals-grid">
                     <!-- Deal 1 -->
-                    <article class="deal-card">
-                        <div class="deal-badge">🌅 Sunset Special</div>
+                    <article class="deal-card" data-category="water" data-price="899" data-popularity="85">
+                        <div class="deal-badge"> Sunset Special</div>
                         <img src="images/algoa-cruise.jpg" 
                              alt="Sunset cruise in Algoa Bay"
                              loading="lazy">
@@ -65,14 +67,13 @@
                     </article>
 
                     <!-- Deal 2 -->
-                    <article class="deal-card">
-                        <div class="deal-badge"> Nature Escape</div>
+                    <article class="deal-card" data-category="nature" data-price="450" data-popularity="70">
                         <img src="images/horse-trail.jpg" 
                              alt="Horse riding in Baviaanskloof"
                              loading="lazy">
                         <div class="deal-content">
                             <h3>Baviaanskloof Horse Trail</h3>
-                            <p class="location"> Baviaanskloof Nature Reserve</p>
+                            <p class="location">📍 Baviaanskloof Nature Reserve</p>
                             <div class="price-section">
                                 <span class="price">R450</span>
                                 <span class="original-price">R700</span>
@@ -82,15 +83,15 @@
                         </div>
                     </article>
 
-                    <!-- Deal 3 - Additional featured deal -->
-                    <article class="deal-card">
-                        <div class="deal-badge"> Most Popular</div>
+                    <!-- Deal 3 -->
+                    <article class="deal-card" data-category="adventure" data-price="699" data-popularity="95">
+                        <div class="deal-badge">⚡ Most Popular</div>
                         <img src="images/tsitsikamma-quad.jpg" 
                              alt="Quad biking in Tsitsikamma"
                              loading="lazy">
                         <div class="deal-content">
                             <h3>Tsitsikamma Quad Adventure</h3>
-                            <p class="location"> Storms River</p>
+                            <p class="location">📍 Storms River</p>
                             <div class="price-section">
                                 <span class="price">R699</span>
                                 <span class="original-price">R1200</span>
@@ -117,11 +118,11 @@
                         <p>Save up to 60% on premium experiences</p>
                     </div>
                     <div class="feature">
-                        <h3>Verified Experiences</h3>
+                        <h3> Verified Experiences</h3>
                         <p>Every deal personally tested by our team</p>
                     </div>
                     <div class="feature">
-                        <h3>Local Experts</h3>
+                        <h3> Local Experts</h3>
                         <p>Deep knowledge of Eastern Cape hidden gems</p>
                     </div>
                     <div class="feature">
@@ -143,5 +144,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

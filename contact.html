@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - MILS DEALS</title>
     <link rel="stylesheet" href="css/styling.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact MILS DEALS for Eastern Cape adventure bookings. Find our location in Gqeberha, call 041 123 4567, or email info@milsdeals.com">
+    <meta name="keywords" content="Eastern Cape adventures, contact MILS DEALS, Gqeberha tourism, adventure bookings">
 </head>
 <body>
     <header>
@@ -38,33 +42,47 @@
                 <!-- Contact Form -->
                 <section class="contact-form-section">
                     <h2>Send us a Message</h2>
-                    <form class="contact-form">
+                    <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
+                            <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>
+                            <div class="error-message" id="nameError"></div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+                            <div class="error-message" id="emailError"></div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <select id="subject" name="subject">
+                            <label for="phone">Cell Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="082 123 4567">
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
                                 <option value="booking">Booking Inquiry</option>
                                 <option value="general">General Question</option>
                                 <option value="partnership">Partnership</option>
                                 <option value="support">Customer Support</option>
                             </select>
+                            <div class="error-message" id="subjectError"></div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Message * (Maximum 100 words)</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      placeholder="Tell us about your adventure needs... (Maximum 100 words)"
+                                      data-max-words="100"></textarea>
+                            <div class="error-message" id="messageError"></div>
                         </div>
                         
-                        <button type="submit" class="cta-button">Send Message</button>
+                        <button type="submit" class="cta-button" id="submitButton">Send Message</button>
+                        <div id="formMessage"></div>
                     </form>
                 </section>
 
@@ -100,6 +118,17 @@
                 </section>
             </div>
         </div>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <h2>Find Us</h2>
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+                <p class="map-caption">Visit our office in Gqeberha for personalized assistance with your adventure bookings.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -112,5 +141,43 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/script.js"></script>
+    
+    <!-- Google Maps - Using a free approach without API key -->
+    <script>
+        // Simple Google Maps implementation that works without API key
+        function initMap() {
+            // Create a simple embedded map that doesn't require API key
+            const mapContainer = document.getElementById('map');
+            if (mapContainer) {
+                // Using OpenStreetMap as a free alternative
+                mapContainer.innerHTML = `
+                    <iframe 
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=25.58,-33.98,25.62,-33.94&layer=mapnik&marker=-33.96,25.6" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        marginheight="0" 
+                        marginwidth="0"
+                        style="border-radius: 15px;"
+                        title="MILS DEALS Location in Gqeberha">
+                    </iframe>
+                `;
+                
+                // Add a link to full page map
+                const mapLink = document.createElement('p');
+                mapLink.innerHTML = '<a href="https://www.openstreetmap.org/?mlat=-33.96&amp;mlon=25.6#map=13/-33.96/25.6" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">View Larger Map</a>';
+                mapContainer.parentNode.appendChild(mapLink);
+            }
+        }
+        
+        // Initialize map when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initMap();
+        });
+    </script>
 </body>
 </html>

@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deals - MILS DEALS</title>
+    <title>Adventure Deals - MILS DEALS | Eastern Cape Experiences</title>
+    <meta name="description" content="Browse all Eastern Cape adventure deals. Filter by category, search specific activities, and find the perfect adventure experience for your budget.">
+    <meta name="keywords" content="Eastern Cape deals, adventure activities, safari deals, water activities, nature experiences">
     <link rel="stylesheet" href="css/styling.css">
 </head>
 <body>
@@ -69,7 +71,7 @@
                 
                 <!-- Search Results Info -->
                 <div class="search-results-info">
-                    <span id="resultsCount">Showing 4 deals</span>
+                    <span id="resultsCount">Showing 6 deals</span>
                 </div>
             </div>
         </section>
@@ -151,7 +153,7 @@
                     </div>
                 </article>
 
-                <!-- Additional Deals -->
+                <!-- Deal 5: Dolphin Watching Tour -->
                 <article class="deal-card" data-category="water" data-price="750" data-popularity="65">
                     <div class="deal-badge">🌊 New</div>
                     <img src="images/algoa-cruise.jpg" 
@@ -170,6 +172,7 @@
                     </div>
                 </article>
 
+                <!-- Deal 6: Mountain Hiking Experience -->
                 <article class="deal-card" data-category="nature" data-price="350" data-popularity="60">
                     <img src="images/horse-trail.jpg" 
                          alt="Hiking trail"
@@ -191,94 +194,16 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
-        <p><a href="contact.html">Contact Us</a> | <a href="about.html">About</a></p>
+        <div class="footer-content">
+            <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About</a>
+                <a href="signin.html">Sign In</a>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        // Search and Filter Functionality
-        function searchDeals() {
-            const searchTerm = document.getElementById('dealSearch').value.toLowerCase();
-            const dealCards = document.querySelectorAll('.deal-card');
-            let visibleCount = 0;
-
-            dealCards.forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
-                const description = card.querySelector('.deal-description').textContent.toLowerCase();
-                
-                if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                    card.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-            document.getElementById('resultsCount').textContent = `Showing ${visibleCount} deals`;
-        }
-
-        function filterDeals() {
-            const category = document.getElementById('categoryFilter').value;
-            const dealCards = document.querySelectorAll('.deal-card');
-            let visibleCount = 0;
-
-            dealCards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                
-                if (category === 'all' || cardCategory === category) {
-                    card.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-            document.getElementById('resultsCount').textContent = `Showing ${visibleCount} deals`;
-        }
-
-        function sortDeals() {
-            const sortBy = document.getElementById('sortFilter').value;
-            const dealsContainer = document.querySelector('.deals-grid');
-            const dealCards = Array.from(document.querySelectorAll('.deal-card'));
-
-            dealCards.sort((a, b) => {
-                switch (sortBy) {
-                    case 'price-low':
-                        return parseInt(a.getAttribute('data-price')) - parseInt(b.getAttribute('data-price'));
-                    case 'price-high':
-                        return parseInt(b.getAttribute('data-price')) - parseInt(a.getAttribute('data-price'));
-                    case 'popular':
-                        return parseInt(b.getAttribute('data-popularity')) - parseInt(a.getAttribute('data-popularity'));
-                    default:
-                        return 0; // Featured - keep original order
-                }
-            });
-
-            // Clear and re-append sorted cards
-            dealsContainer.innerHTML = '';
-            dealCards.forEach(card => dealsContainer.appendChild(card));
-        }
-
-        function resetFilters() {
-            document.getElementById('dealSearch').value = '';
-            document.getElementById('categoryFilter').value = 'all';
-            document.getElementById('sortFilter').value = 'featured';
-            
-            const dealCards = document.querySelectorAll('.deal-card');
-            dealCards.forEach(card => card.style.display = 'block');
-            
-            document.getElementById('resultsCount').textContent = `Showing ${dealCards.length} deals`;
-            
-            // Reset to original order
-            sortDeals();
-        }
-
-        // Enable search on Enter key
-        document.getElementById('dealSearch').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                searchDeals();
-            }
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

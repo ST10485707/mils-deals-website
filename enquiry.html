@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry - MILS DEALS | Get Adventure Information & Quotes</title>
+    <meta name="description" content="Get detailed information about Eastern Cape adventures. Request quotes for group bookings, volunteering opportunities, or sponsorship enquiries with MILS DEALS.">
+    <meta name="keywords" content="adventure enquiry, Eastern Cape tours, group booking, volunteer opportunities, sponsorship, adventure quotes">
+    <link rel="stylesheet" href="css/styling.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="images/mils-deals-logo.jpg" 
+                 alt="MILS DEALS Logo - Eastern Cape's best adventure deals"
+                 class="logo-image">
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="enquiry.html" class="active">Enquire</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <h1>Adventure Enquiries</h1>
+            <p>Get detailed information, quotes, or enquire about volunteering and sponsorship opportunities</p>
+        </section>
+
+        <div class="contact-container">
+            <div class="contact-grid">
+                <!-- Enquiry Form Section -->
+                <div class="contact-form-section">
+                    <h2>Send Your Enquiry</h2>
+                    <form id="enquiryForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="enquiry-name">Full Name *</label>
+                            <input type="text" id="enquiry-name" name="enquiry-name" required>
+                            <div class="error-message" id="enquiry-nameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="enquiry-email">Email Address *</label>
+                            <input type="email" id="enquiry-email" name="enquiry-email" required>
+                            <div class="error-message" id="enquiry-emailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="enquiry-phone">Phone Number *</label>
+                            <input type="tel" id="enquiry-phone" name="enquiry-phone" placeholder="+27 82 123 4567" required>
+                            <div class="error-message" id="enquiry-phoneError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="enquiry-type">Enquiry Type *</label>
+                            <select id="enquiry-type" name="enquiry-type" required>
+                                <option value="">Please select...</option>
+                                <option value="adventure-info">Adventure Information</option>
+                                <option value="group-booking">Group Booking Quote</option>
+                                <option value="corporate-event">Corporate Event</option>
+                                <option value="volunteer">Volunteer Opportunity</option>
+                                <option value="sponsorship">Sponsorship</option>
+                                <option value="partnership">Business Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message" id="enquiry-typeError"></div>
+                        </div>
+
+                        <div class="form-group" id="adventure-selection" style="display: none;">
+                            <label for="selected-adventure">Select Adventure</label>
+                            <select id="selected-adventure" name="selected-adventure">
+                                <option value="">Any adventure</option>
+                                <option value="algoa-cruise">Algoa Bay Sunset Cruise</option>
+                                <option value="horse-trail">Baviaanskloof Horse Trail</option>
+                                <option value="tsitsikamma-quad">Tsitsikamma Quad Adventure</option>
+                                <option value="addo-safari">Addo Elephant Safari</option>
+                                <option value="dolphin-tour">Port Elizabeth Dolphin Tour</option>
+                                <option value="hiking-trail">Eastern Cape Hiking Trail</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="group-size" style="display: none;">
+                            <label for="participants">Number of Participants</label>
+                            <input type="number" id="participants" name="participants" min="1" max="100" placeholder="e.g., 10">
+                        </div>
+
+                        <div class="form-group" id="volunteer-skills" style="display: none;">
+                            <label for="skills">Your Skills & Experience</label>
+                            <textarea id="skills" name="skills" placeholder="Tell us about your relevant skills and why you'd like to volunteer..." rows="3"></textarea>
+                            <div class="character-counter" id="skillsCounter">0/200 words</div>
+                        </div>
+
+                        <div class="form-group" id="sponsorship-details" style="display: none;">
+                            <label for="sponsorship-type">Sponsorship Type</label>
+                            <select id="sponsorship-type" name="sponsorship-type">
+                                <option value="">Select type...</option>
+                                <option value="financial">Financial Support</option>
+                                <option value="equipment">Equipment Donation</option>
+                                <option value="services">Services/Expertise</option>
+                                <option value="venue">Venue Partnership</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="enquiry-message">Your Enquiry *</label>
+                            <textarea id="enquiry-message" name="enquiry-message" 
+                                      placeholder="Please provide details about your enquiry, including preferred dates, specific requirements, or any questions you have..."
+                                      rows="6" required data-max-words="200"></textarea>
+                            <div class="error-message" id="enquiry-messageError"></div>
+                            <div class="character-counter" id="enquiry-messageCounter">0/200 words</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferred-contact">Preferred Contact Method</label>
+                            <select id="preferred-contact" name="preferred-contact">
+                                <option value="email">Email</option>
+                                <option value="phone">Phone Call</option>
+                                <option value="whatsapp">WhatsApp</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newsletter">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                Send me updates about new adventures and special deals
+                            </label>
+                        </div>
+
+                        <button type="submit" id="submitEnquiry" class="cta-button">Send Enquiry</button>
+                        <div id="enquiryMessage"></div>
+                    </form>
+                </div>
+
+                <!-- Enquiry Information Section -->
+                <div class="contact-info-section">
+                    <h2>What Happens Next?</h2>
+                    
+                    <div class="contact-method">
+                        <h3>📧 Quick Response</h3>
+                        <p>We'll respond to your enquiry within <strong>24 hours</strong> during business days.</p>
+                    </div>
+
+                    <div class="contact-method">
+                        <h3>💬 Detailed Information</h3>
+                        <p>Receive comprehensive details, pricing, and availability for your chosen adventure.</p>
+                    </div>
+
+                    <div class="contact-method">
+                        <h3>🎯 Personalised Service</h3>
+                        <p>Get tailored recommendations based on your preferences and group size.</p>
+                    </div>
+
+                    <div class="contact-method">
+                        <h3>🤝 Volunteer & Sponsorship</h3>
+                        <p>Learn about opportunities to get involved with Eastern Cape tourism development.</p>
+                    </div>
+
+                    <h3 style="margin-top: 40px;">Popular Enquiry Types</h3>
+                    <ul style="color: var(--dark); line-height: 1.8; margin-left: 20px;">
+                        <li><strong>Group Bookings:</strong> Special rates for 8+ people</li>
+                        <li><strong>Corporate Events:</strong> Team building adventures</li>
+                        <li><strong>Student Groups:</strong> Educational adventure packages</li>
+                        <li><strong>Volunteering:</strong> Conservation and community projects</li>
+                        <li><strong>Sponsorship:</strong> Support local adventure tourism</li>
+                    </ul>
+
+                    <div class="contact-method" style="margin-top: 30px; background: rgba(26, 188, 156, 0.1);">
+                        <h3>📞 Need Immediate Assistance?</h3>
+                        <p>Call us directly: <a href="tel:+27820751392">+27 82 075 1392</a></p>
+                        <p>Email: <a href="mailto:enquiries@milsdeals.com">enquiries@milsdeals.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 MILS DEALS | Proudly Eastern Cape</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About</a>
+                <a href="enquiry.html">Enquire</a>
+                <a href="signin.html">Sign In</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Enquiry page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            initEnquiryForm();
+        });
+
+        function initEnquiryForm() {
+            const enquiryType = document.getElementById('enquiry-type');
+            const adventureSelection = document.getElementById('adventure-selection');
+            const groupSize = document.getElementById('group-size');
+            const volunteerSkills = document.getElementById('volunteer-skills');
+            const sponsorshipDetails = document.getElementById('sponsorship-details');
+
+            // Show/hide relevant fields based on enquiry type
+            enquiryType.addEventListener('change', function() {
+                // Hide all conditional fields first
+                adventureSelection.style.display = 'none';
+                groupSize.style.display = 'none';
+                volunteerSkills.style.display = 'none';
+                sponsorshipDetails.style.display = 'none';
+
+                // Show relevant fields based on selection
+                switch(this.value) {
+                    case 'adventure-info':
+                    case 'group-booking':
+                    case 'corporate-event':
+                        adventureSelection.style.display = 'block';
+                        groupSize.style.display = 'block';
+                        break;
+                    case 'volunteer':
+                        volunteerSkills.style.display = 'block';
+                        break;
+                    case 'sponsorship':
+                        sponsorshipDetails.style.display = 'block';
+                        break;
+                }
+            });
+
+            // Form submission
+            const enquiryForm = document.getElementById('enquiryForm');
+            if (enquiryForm) {
+                enquiryForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    if (validateEnquiryForm(this)) {
+                        submitEnquiryForm(this);
+                    }
+                });
+            }
+
+            // Initialize character counters
+            const messageField = document.getElementById('enquiry-message');
+            if (messageField) {
+                messageField.addEventListener('input', function() {
+                    updateWordCount(this, 200);
+                });
+                updateWordCount(messageField, 200);
+            }
+
+            const skillsField = document.getElementById('skills');
+            if (skillsField) {
+                skillsField.addEventListener('input', function() {
+                    updateWordCount(this, 200);
+                });
+            }
+        }
+
+        function validateEnquiryForm(form) {
+            let isValid = true;
+
+            // Validate required fields
+            const requiredFields = form.querySelectorAll('input[required], select[required], textarea[required]');
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    showFieldError(field, '❌ This field is required');
+                    isValid = false;
+                } else {
+                    clearFieldError(field);
+                }
+            });
+
+            // Validate email
+            const emailField = document.getElementById('enquiry-email');
+            if (emailField && !validateEmailField(emailField)) {
+                isValid = false;
+            }
+
+            // Validate phone
+            const phoneField = document.getElementById('enquiry-phone');
+            if (phoneField && !validatePhoneField(phoneField)) {
+                isValid = false;
+            }
+
+            // Validate message word count
+            const messageField = document.getElementById('enquiry-message');
+            if (messageField) {
+                const text = messageField.value.trim();
+                const words = text ? text.split(/\s+/).filter(word => word.length > 0) : [];
+                if (words.length > 200) {
+                    showFieldError(messageField, `❌ Maximum 200 words allowed. You have used ${words.length} words.`);
+                    isValid = false;
+                }
+            }
+
+            return isValid;
+        }
+
+        function submitEnquiryForm(form) {
+            const submitButton = document.getElementById('submitEnquiry');
+            const enquiryMessage = document.getElementById('enquiryMessage');
+            
+            // Show loading state
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending Enquiry...';
+            submitButton.disabled = true;
+            submitButton.classList.add('loading');
+
+            // Get form data for confirmation message
+            const formData = new FormData(form);
+            const enquiryType = document.getElementById('enquiry-type');
+            const selectedType = enquiryType.options[enquiryType.selectedIndex].text;
+
+            setTimeout(() => {
+                // Show success message with relevant info
+                let successMessage = `
+                    <div class="success-message">
+                        <h3>✅ Enquiry Sent Successfully!</h3>
+                        <p><strong>Enquiry Type:</strong> ${selectedType}</p>
+                        <p>Thank you for your interest in MILS DEALS. We'll get back to you within 24 hours with detailed information.</p>
+                        <p>You'll receive a confirmation email shortly with your enquiry details.</p>
+                    </div>
+                `;
+                
+                enquiryMessage.innerHTML = successMessage;
+                enquiryMessage.style.display = 'block';
+
+                // Reset form
+                form.reset();
+                
+                // Reset conditional fields
+                document.getElementById('adventure-selection').style.display = 'none';
+                document.getElementById('group-size').style.display = 'none';
+                document.getElementById('volunteer-skills').style.display = 'none';
+                document.getElementById('sponsorship-details').style.display = 'none';
+
+                // Reset button
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                submitButton.classList.remove('loading');
+
+                // Reset character counters
+                initCharacterCounters();
+
+                // Scroll to success message
+                enquiryMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                console.log('Enquiry form submitted successfully!');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

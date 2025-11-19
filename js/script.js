@@ -458,4 +458,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-console.log('MILS DEALS JavaScript file loaded');
+console.log('MILS DEALS JavaScript file loaded');// 404 page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('404 Page - MILS DEALS');
+            
+            // Add some interactive elements
+            const errorCode = document.querySelector('.error-code');
+            if (errorCode) {
+                errorCode.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.1)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                
+                errorCode.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            }
+            
+            // Log 404 errors for analytics (simulated)
+            console.warn('404 Error: User encountered missing page - ' + window.location.href);
+        });
+

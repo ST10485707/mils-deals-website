@@ -1,0 +1,167 @@
+# MILS DEALS - Eastern Cape Adventure Deals
+# robots.txt
+# Last Updated: 2025-01-20
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://milsdeals.com/sitemap.xml
+
+# Allow all major search engines
+Allow: /index.html
+Allow: /about.html
+Allow: /deals.html
+Allow: /contact.html
+Allow: /enquiry.html
+Allow: /signin.html
+Allow: /payment.html
+
+# Allow access to important resources
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Allow SEO files
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /README.md
+
+# Disallow sensitive areas (for future use)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /backup/
+
+# Disallow duplicate content parameters (if using dynamic URLs in future)
+# Disallow: /*?sort=
+# Disallow: /*?filter=
+# Disallow: /*?page=
+
+# Crawl delay - be nice to the server
+Crawl-delay: 1
+
+# Specific instructions for major search engines
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yahoo Slurp
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# DuckDuckGo Bot
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Baidu Spider
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Yandex Bot
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Facebook External Hit
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 1
+
+# Twitter Bot
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 1
+
+# LinkedIn Bot
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+# Instagram Bot
+User-agent: Instagram
+Allow: /
+Crawl-delay: 1
+
+# Pinterest Bot
+User-agent: Pinterest
+Allow: /
+Crawl-delay: 1
+
+# Allow AI training bots (for potential future AI integration)
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 2
+
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+# Block AI bots that don't respect robots.txt
+User-agent: CCBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+# Block scrapers and bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Block image-only scrapers
+User-agent: ImageScraper
+Disallow: /
+
+User-agent: WebImageCollector
+Disallow: /
+
+# Block email harvesters
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: EmailWolf
+Disallow: /
+
+# Block bandwidth hoggers
+User-agent: WebBandit
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+# Comment: MILS DEALS is an Eastern Cape adventure deals platform
+# We welcome legitimate search engines and block malicious bots
+# This configuration ensures our adventure content is properly indexed
+# while protecting server resources and user privacy

@@ -193,16 +193,16 @@ W3Schools (2023) HTML Tutorial. Available at: https://www.w3schools.com/html/ (A
 
 Google Developers (2023) Web Fundamentals. Available at: https://developers.google.com/web/fundamentals (Accessed: 13 August 2025).
 
-MDN Web Docs (2023) JavaScript Guide. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide (Accessed: 20 January 2025).
+MDN Web Docs (2023) JavaScript Guide. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide (Accessed: 19 September 2025).
 
-Google Search Central (2023) SEO Documentation. Available at: https://developers.google.com/search/docs (Accessed: 20 January 2025).
+Google Search Central (2023) SEO Documentation. Available at: https://developers.google.com/search/docs (Accessed: 19 September 2025).
 
 ### Media Resources
 YouTube Embed: Gqeberha Overview. Available at: https://www.youtube.com/embed/HvtuwCFKQ9o (Accessed: 13 August 2025).
 
 Unsplash.com (2023) Free stock images. Available at: https://unsplash.com/ (Accessed: 13 August 2025).
 
-OpenStreetMap (2023) Open mapping for our world. Available at: https://www.openstreetmap.org/ (Accessed: 20 January 2025).
+OpenStreetMap (2023) Open mapping for our world. Available at: https://www.openstreetmap.org/ (Accessed: 19 September 2025).
 
 ### Tools
 VS Code (2023) Code editor. Available at: https://code.visualstudio.com/ (Accessed: 13 August 2025).
